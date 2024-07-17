@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: rgb(68, 68, 68);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 90vh;
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    button {
+      padding: 50px;
+      border-radius: 2%;
+      font-size: 80px;
+      border: 5px solid rgb(255, 255, 255);
+      background: rgb(255, 0, 0);
+      color: aliceblue;
+      cursor: pointer;
+    }
+
+    #result {
+      font-size: 30px;
+      color: aliceblue;
+    }
+  </style>
+</head>
+
+<body>
+
+  <button onclick="
+      window.alert('Please Follow The Steps.');
+    window.alert('You going to write your name and hours time in your country.');
+    let name = prompt('What is your name?');
+    let hour = prompt('Write your hour time in 24-hours format');
+    let massage = '';
+
+    if (hour >= 6 && hour <= 12) {
+      massage = `Good morning ${name}`;
+    } else if (hour >= 13 && hour <= 17) {
+      massage = `Good afternoon ${name}`;
+    } else if (hour >= 18 && hour <= 23) {
+      massage = `Good night ${name}`;
+    } else if (hour >= 1 && hour <= 5) {
+      massage = `Good night ${name}`;
+    } else {
+      massage = `Wrong time ${name}`;
+      document.getElementById('result').innerText = hour = false;
+    }
+    document.getElementById('result').innerText = hour;
+    document.getElementById('result').innerText = massage;
+    ">Click Here</button>
+
+  <div id="result"></div>
+</body>
+
+</html>
